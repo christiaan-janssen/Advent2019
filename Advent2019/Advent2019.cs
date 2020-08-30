@@ -14,6 +14,9 @@ namespace Advent2019NS
 
             Day01 day01 = new Day01();
             Console.WriteLine("Day 01 - A: {0:G}", day01.calculateTotalMass(inputData));
+
+            var total_fuel = inputData.Select(f => day01.calculateFuelForFuelForMass(Int32.Parse(f))).Sum();
+            Console.WriteLine("Day 01 - B: {0:G}", total_fuel);
         }
     }
 }

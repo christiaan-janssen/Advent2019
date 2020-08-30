@@ -6,9 +6,15 @@ namespace Advent2019NS
 {
     public class Day01
     {
-        public int calculateMass (int mass)
+        public int calculateMass(int mass) => Math.Max(0, mass / 3 - 2);
+
+        public int calculateFuelForFuelForMass (int mass, int fuel=0)
         {
-            return mass / 3 - 2;
+            if (mass <= 0) { return fuel; }
+
+            int extra_fuel = calculateMass(mass);
+            return calculateFuelForFuelForMass(extra_fuel, fuel + extra_fuel);
+
         }
 
         public int calculateTotalMass(string[] input)

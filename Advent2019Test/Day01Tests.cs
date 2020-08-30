@@ -49,5 +49,32 @@ namespace Advent2019Test
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Calculate_Fuel_For_Fuel_For_Mass_off_14() 
+        {
+            int expected = 2;
+            int actual = day01.calculateFuelForFuelForMass(14);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Calculate_Fuel_For_Fuel_For_Mass_off_1969() 
+        {
+            int expected = 966;
+            int actual = day01.calculateFuelForFuelForMass(1969);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Calculate_Fuel_For_Fuel_For_Mass_off_100756() 
+        {
+            int expected = 50346;
+            int actual = day01.calculateFuelForFuelForMass(100756);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
